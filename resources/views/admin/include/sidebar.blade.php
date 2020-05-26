@@ -3,7 +3,7 @@
     <div class="app-sidebar__user">
         <div>
             <p class="app-sidebar__user-name">Iroshana </p>
-            <p class="app-sidebar__user-designation">Webznote Developer</p>
+            <p class="app-sidebar__user-designation">Web Developer</p>
         </div>
     </div>
     <ul class="app-menu">
