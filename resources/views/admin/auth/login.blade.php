@@ -17,13 +17,14 @@
     <div class="logo">
         <h1>{{ config('app.name') }}</h1>
     </div>
+    @include('admin.include.flash')
     <div class="login-box">
         <form class="login-form" action="{{ route('admin.post.login') }}" method="POST" role="form">
             @csrf
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
             <div class="form-group">
                 <label class="control-label" for="email">Email Address</label>
-                <input class="form-control" type="email" id="email" name="email" placeholder="Email address" autofocus value="{{ old('email') }}">
+                <input class="form-control" type="text" id="email" name="email" placeholder="Email address" autofocus value="{{ old('email') }}">
             </div>
             <div class="form-group">
                 <label class="control-label" for="password">Password</label>

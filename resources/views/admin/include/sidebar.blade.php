@@ -8,7 +8,9 @@
     </div>
     <ul class="app-menu">
         <li>
-            <a class="app-menu__item active" href="#"><i class="app-menu__icon fa fa-dashboard"></i>
+            <a class="app-menu__item"
+               {{\Illuminate\Support\Facades\Route::currentRouteName()=='admin.dashboard'?'active':''}} href="{{route('admin.dashboard')}}">
+                <i class="app-menu__icon fa fa-dashboard"></i>
                 <span class="app-menu__label">Dashboard</span>
             </a>
         </li>
@@ -22,7 +24,8 @@
                     <a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Admin Users</a>
                 </li>
                 <li>
-                    <a class="treeview-item" href="#" target="_blank" rel="noopener noreferrer"><i class="icon fa fa-circle-o"></i> Roles</a>
+                    <a class="treeview-item" href="#" target="_blank" rel="noopener noreferrer"><i
+                            class="icon fa fa-circle-o"></i> Roles</a>
                 </li>
                 <li>
                     <a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Permissions</a>
@@ -30,9 +33,29 @@
             </ul>
         </li>
         <li>
-            <a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-cogs"></i>
+            <a class="app-menu__item {{\Illuminate\Support\Facades\Route::currentRouteName()=='admin.settings'?'active':''}}"
+               href="{{route('admin.settings')}}">
+                <i class="app-menu__icon fa fa-cogs"></i>
                 <span class="app-menu__label">Settings</span>
             </a>
         </li>
+        <a class="app-menu__item {{\Illuminate\Support\Facades\Route::currentRouteName()=='admin.categories.index'?'active':''}}"
+           href="{{route('admin.categories.index')}}">
+            <i class="app-menu__icon fa fa-tags"></i>
+            <span class="app-menu__label">Categories</span>
+        </a>
+
+        <a class="app-menu__item {{\Illuminate\Support\Facades\Route::currentRouteName()=='admin.brands.index'?'active':''}}"
+           href="{{route('admin.brands.index')}}">
+            <i class="app-menu__icon fa fa-briefcase"></i>
+            <span class="app-menu__label">Brands</span>
+        </a>
+
+        <a class="app-menu__item {{\Illuminate\Support\Facades\Route::currentRouteName()=='admin.attributes.index'?'active':''}}"
+           href="{{route('admin.attributes.index')}}">
+            <i class="app-menu__icon fa fa-th"></i>
+            <span class="app-menu__label">Attributes</span>
+        </a>
+
     </ul>
 </aside>

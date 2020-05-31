@@ -11546,7 +11546,7 @@ NOTE: use percentage font sizes or else old IE chokes
 --------------------------------------------------------------------------------------------------*/
 
 .fc button {
-  /* force height to include the border and padding */
+  /* force height to includes the border and padding */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* dimensions */
